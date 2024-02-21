@@ -55,7 +55,7 @@ if (!program.opts() || !program.opts().authCode) {
             "client_secret": "acf0d8fefaff9cfc373c8180404a5552d56ce17370d170e3c4829f043af699fb",
             "code": authCode,
             "grant_type": "authorization_code",
-            "redirect_URI": "https://ansima.dev" //should change when i will deploy the app
+            "redirect_URI": "https://webflow-local-bridge.replit.app" //should change when i will deploy the app
         });
 
         req.write(postData);

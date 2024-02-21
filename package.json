@@ -1,0 +1,42 @@
+{
+    "name": "webflow_local_bridge",
+    "version": "1.0.0",
+    "description": "Run and deploy custom code to your webflow websites with ease",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "start": "node index.cjs",
+        "dev": "nodemon index.cjs",
+        "upload": "node bridgecommands/commit.cjs",
+        "register": "node bridgecommands/register.cjs",
+        "set": "node bridgecommands/attach.cjs",
+        "unset": "node bridgecommands/detach.cjs",
+        "show": "node bridgecommands/show.cjs",
+        "show.registered": "node bridgecommands/registeredscripts.cjs",
+        "auth": "node bridgecommands/auth.cjs"
+    },
+    "keywords": [
+        "webflow",
+        "cli"
+    ],
+    "author": "Ansima",
+    "license": "ISC",
+    "dependencies": {
+        "axios": "^1.6.7",
+        "colors": "^1.4.0",
+        "commander": "^12.0.0",
+        "dotenv": "^16.4.5",
+        "express": "^4.18.2",
+        "express-ws": "^5.0.2",
+        "fast-xml-parser": "^4.3.4",
+        "form-data": "^4.0.0",
+        "isomorphic-fetch": "^3.0.0",
+        "nodemon": "^3.0.3",
+        "webflow": "^0.2.2",
+        "webflow-api": "^1.3.1",
+        "ws": "^8.16.0"
+    },
+    "devDependencies": {
+        "wrangler": "^3.28.3"
+    }
+}

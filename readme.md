@@ -38,7 +38,7 @@ npm run upload -- push --file <filename>
 
 Register a script with a specific version.
 
-Note : The first time you create a new file remember to register it's dev version (`npm run register -- register --version=dev --file=test.js `, which will automatically register the localhost url) then you can switch to that dev version whenever you want to start development and see changes live.
+Note : The first time you create a new file remember to register it's dev version (`npm run register -- register --version=dev --file=test.js --location=head`, which will automatically register the localhost url) then you can switch to that dev version whenever you want to start development and see changes live.
 
 
 ```bash

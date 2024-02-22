@@ -13,10 +13,12 @@ program
     .description('Register the script to the list of registered scripts')
     .option("--file <string>", "relative path of the file to the scripts/ folder eg. test.js if the file is right inside the scripts folder")
     .option("--version <string>", "semantic version eg. 1.0.0, you can use dev as well")
+    .option("--location <string>", "Either body or head")
     .parse();
 
 var file = program.opts().file;
 var version = program.opts().version;
+var location = program.opts().location
 
 if (!file || !version) {
     program.outputHelp();
@@ -46,7 +48,7 @@ try {
             var options = {
                 'method': 'POST',
                 'hostname': 'api.webflow.com',
-                'path': `/v2/sites/${userconfig.site_id}/registered_scripts/hosted`,
+                'path': `/v2/sites/${userconfig.site_id}/registered_scripts/inline`,
                 'headers': {
                     'accept': 'application/json',
                     'authorization': `Bearer ${process.env.ACCESS_TOKEN}`,
@@ -80,7 +82,7 @@ try {
             });
             var postData = JSON.stringify({
                 "canCopy": true,
-                hostedLocation,
+                sourceCode: `(function(){const script = document.createElement('script');script.src = '${hostedLocation}';script.type = 'text/javascript';script.crossorigin = 'anonymous';document.${location}.appendChild(script);})()`,
                 integrityHash,
                 "version": version == "dev" ? '0.0.1' : version,
                 "displayName": cleanDisplayName(`scripts__${file}`)

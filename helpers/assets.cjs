@@ -50,14 +50,14 @@ async function create_asset_meta_and_upload(filePath = null) {
             return parser.parse(uploadResponse.data);
         } catch (error) {
             console.error('Error:', error.message);
-            if (error.response) {
+            if (error.response.data) {
                 throw new Error(error.response.data);
             }
             throw new Error("Unkown error");
         }
     } catch (error) {
         console.error('Error:', error.message);
-        if (error.response) {
+        if (error.response.data) {
             throw new Error(error.response.data);
         }
         throw new Error("Unkown error");

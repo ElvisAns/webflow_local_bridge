@@ -42,7 +42,8 @@ Note : The first time you create a new file remember to register it's dev versio
 
 
 ```bash
-npm run register -- register --version=<version> --file=<filename>
+npm run register -- register --version=<version> --file=<filename> --location=<location>
+
 ```
 
 ### Set

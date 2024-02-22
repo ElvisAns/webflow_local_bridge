@@ -2,10 +2,12 @@ const express = require('express');
 const path = require('path');
 const fs = require('fs');
 const create_asset_meta_and_upload = require("./helpers/assets.cjs");
+var cors = require('cors')
 require('dotenv').config();
 
 const app = express();
 app.use(express.json());
+app.use(cors());
 
 // Serve static files from the 'scripts' folder
 const staticFolder = path.join(__dirname, 'scripts');

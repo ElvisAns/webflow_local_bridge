@@ -18,7 +18,7 @@ To install the project, follow these steps:
 ### Authentication
 
 Authenticate your CLI instance with an authorization code.
-To get the authCode please refer to the app website at https://webflow-local-bridge.replit.app/
+To get the authCode please refer to the app website at [https://webflow-local-bridge.replit.app/](https://webflow-local-bridge-website.vercel.app/)
 
 ```bash
 npm run auth -- auth --authCode <authCode>

@@ -6,9 +6,9 @@ The Webflow Custom Scripts CLI tool helps Webflow developers manage custom scrip
 
 To install the project, follow these steps:
 
-1. Clone the repository to your local machine.
+1. Clone the repository to your local machine `git clone https://github.com/ElvisAns/webflow_local_bridge local_bridge` or download the latest release https://github.com/ElvisAns/webflow_local_bridge/releases
 2. Install dependencies by running `npm install`.
-3. Change your site ID, Client ID and Client Secret inside the `user.config.cjs` file (You can see your webflow site ID at the general settings of the site and the Client ID/Client Secret from the custom app tab)
+3. Change your Site ID, Client ID and Client Secret inside the `user.config.cjs` file (You can see your webflow site ID at the general settings of the site and the Client ID/Client Secret from the custom app tab)
 4. Add javascript files inside the scripts folder (so you can run command below against them)
 5. Start your dev server by running`npm run dev`. for more please read below.
 

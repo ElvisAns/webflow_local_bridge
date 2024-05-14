@@ -3,17 +3,15 @@
     "version": "1.0.0",
     "description": "Run and deploy custom code to your webflow websites with ease",
     "main": "index.js",
+    "type": "module",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
-        "start": "node index.cjs",
-        "dev": "nodemon index.cjs",
-        "upload": "node bridgecommands/commit.cjs",
-        "register": "node bridgecommands/register.cjs",
-        "set": "node bridgecommands/attach.cjs",
-        "unset": "node bridgecommands/detach.cjs",
-        "show": "node bridgecommands/show.cjs",
-        "show.registered": "node bridgecommands/registeredscripts.cjs",
-        "auth": "node bridgecommands/auth.cjs"
+        "start": "node ./index.cjs",
+        "dev": "nodemon ./index.cjs",
+        "bridge": "node ./command.js"
+    },
+    "bin": {
+        "webflowbridge": "./command.js"
     },
     "keywords": [
         "webflow",

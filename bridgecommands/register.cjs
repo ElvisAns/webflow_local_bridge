@@ -15,6 +15,10 @@ function cleanDisplayName(displayName) {
 
 const deploy = (({ file, version, location }) => {
     try {
+        if (location !== 'footer' && location !== 'header') {
+            throw new Error("Location must be 'header' or 'footer'");
+        }
+        location = location == 'footer' ? 'body' : 'head';
         const filePath = path.join(__dirname, '../scripts/', file);
         if (!filePath || !fs.existsSync(filePath)) {
             console.log(colors.red(`The filepath ${filePath} is not valid or file dont exist`));

@@ -1,6 +1,6 @@
-# Webflow Custom Scripts CLI
+# Webflow Local bridge CLI
 
-The Webflow Custom Scripts CLI tool helps Webflow developers manage custom scripts within their projects easily.
+Local Bridge is a powerful command-line tool designed to supercharge the way Webflow developers handle custom scripts.
 
 ## Installation
 

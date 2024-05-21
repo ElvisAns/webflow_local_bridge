@@ -13,7 +13,7 @@ const commit = (file) => {
                 'method': 'GET',
                 'hostname': 'localhost',
                 'port': 3000,
-                'path': '/sync/files?filePath=' + filePath,
+                'path': '/sync/files?filePath=' + encodeURI(filePath),
                 'headers': {},
                 'maxRedirects': 20
             };

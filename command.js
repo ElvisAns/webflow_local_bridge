@@ -34,7 +34,7 @@ program
     .description('Deploy a script version of your script, stage it to be used on a page')
     .option("--file <string>", "relative path of the file to the scripts/ folder eg. test.js if the file is right inside the scripts folder")
     .option("--version <string>", "semantic version eg. 1.0.0, dev version is used to deploy the script that will be in sync with your local development file")
-    .option("--location <string>", "body|head")
+    .option("--location <string>", "header|footer")
     .action((options) => deploy(options));
 
 

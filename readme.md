@@ -28,10 +28,12 @@ Yes, it is a hacky way to authenticate but it works for now.
 - Copy the sample curl command shown to you and paste it in your favorite text editor then copy the value of the Bearer token
 - If no .env file is found in the project folder, create one and add the following line `ACCESS_TOKEN=<your_access_token>`
 
-
-4. Start adding javascript files inside the scripts folder (so you can run command below against them)
-5. Start your dev server by running`npm run dev`. for more please read below.
-
+### Adding JavaScript Files
+Start the Development Server
+```bash
+npm run dev
+```
+Add JavaScript files to the scripts folder to be able to use the commands below with them.
 
 ## Steps to commit your changes
 

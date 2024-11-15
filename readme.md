@@ -59,6 +59,7 @@ Note : The first time you create a new file remember to register it's dev versio
 ```bash
 npm run bridge -- deploy --version=<version> --file=<filename> --location=<location>
 ```
+Location can be `header` or `footer`
 
 ### 3. Attach the script to the page
 

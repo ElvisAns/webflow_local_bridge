@@ -4,9 +4,13 @@ Local Bridge is a powerful command-line tool designed to supercharge the way Web
 
 ## Installation
 
+Prequesites :
+- Node and NPM Installed (Preferably Node 20+)
+- A webflow account
+
 To install the project, follow these steps:
 
-1. Clone the repository to your local machine `git clone https://github.com/ElvisAns/webflow_local_bridge local_bridge` or download the latest release https://github.com/ElvisAns/webflow_local_bridge/releases
+1. Clone the repository to your local machine `git clone https://github.com/ElvisAns/webflow_local_bridge local_bridge.git` or download the latest release https://github.com/ElvisAns/webflow_local_bridge/releases
 2. Cd to the project folder `cd local_bridge`
 3. Install dependencies by running `npm install`.
 4. Change your Site ID, Client ID and Client Secret inside the `user.config.cjs` file (You can see your webflow site ID at the general settings of the site and the Client ID/Client Secret from the custom app tab). When you dont have a custom app with Client ID and Client Secret, just fill the Site ID and just leave the Client ID and Client Secret empty.
@@ -29,6 +33,11 @@ Yes, it is a hacky way to authenticate but it works for now.
 - If no .env file is found in the project folder, create one and add the following line `ACCESS_TOKEN=<your_access_token>`
 
 ### Adding JavaScript Files
+Install Dependencies
+```bash
+npm install
+```
+
 Start the Development Server
 ```bash
 npm run dev
@@ -73,6 +82,9 @@ Make sure you redeploy your site from the designer for the script deployment to 
 Tip : If you dont know how to get the pageId, you can see the url of your designer tab while making changes to that page and take the value of the pageId query param. For homepage you usually dont see pageId in the url, so the hack is to visit the page in the browser, inspect the site with dev tools and take the value of the attribute `data-wf-page` from the `html` tag.
 
 **Tip : Anytime you want to see changes live (dev server must be running) without redeploying your site any time you make changes, please attach the dev version to the page, deploy from the designer and stay between your code editor and the browser (just refresh the page in the browser). When  you are done making changes, upload the new file as of step 1, register the newest version and attach it to the page again then finally deploy from the designer. If you want to rollback to the previous version, just attach the previous version to the page and deploy from the designer.**
+
+![2025-01-03-1543 excalidraw](https://github.com/user-attachments/assets/87da598b-36b2-4289-b824-4ceb2de9025f)
+
 
 ### 4. Detach the script from the page
 
